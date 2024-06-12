@@ -1,21 +1,21 @@
 # Nova issue
 
-## Run project
+## Start
 
 For quick launch you can use [Herd](https://herd.laravel.com/).
 
 
-```bash
+clone project 
+```
 git clone git@github.com:dzandrey/nova-issue-batch-action.git
+```
+or download from github
 
-cd nova-issue-batch-action
-
-composer install
-
-php artisan key:generate
-
-php artisan migrate
-
+## Run project
+```bash
+composer install \
+php artisan key:generate \
+php artisan migrate \
 php artisan db:seed
 ```
 
