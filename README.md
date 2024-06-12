@@ -6,8 +6,9 @@ For quick launch you can use [Herd](https://herd.laravel.com/).
 
 
 ```bash
-git clone <your-repo-url>
-cd <your-repo-directory>
+git clone git@github.com:dzandrey/nova-issue-batch-action.git
+
+cd nova-issue-batch-action
 
 composer install
 
@@ -21,7 +22,7 @@ php artisan db:seed
 ## Error Reproduction
 1. Login and go to the user resource.
 2. Create a minimum of 3 users.
-3. Open the file `vendor/laravel/nova/src/Http/Requests/ActionRequest.php` and replace the `toQueryWithoutScopes` method with the code below:
+3. Open the file `vendor/laravel/nova/src/Http/Requests/ActionRequest.php` and add `dd()` to the function `toQueryWithoutScopes()` to debug `$this->selectedResourceIds()`, or replace the `toQueryWithoutScopes` method with the code below:
 
 ```php
 public function toQueryWithoutScopes()
